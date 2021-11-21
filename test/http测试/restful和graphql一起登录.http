@@ -1,0 +1,49 @@
+### 登录请求
+POST http://localhost:3000/graphql HTTP/1.1
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+mutation {
+    login(email: "zm@163.com", password: "aaaaaa"){
+        token
+    }
+}
+### 查询
+POST http://localhost:3000/graphql HTTP/1.1
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+query{
+    queryLoginedUser(id: "600fffc5bc8bab18488419f5"){
+        name
+    }
+}
+
+
+### 查询
+POST http://localhost:3000/graphql HTTP/1.1
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+query QueryLoginedUser($id: ID!){
+        queryLoginedUser(id: $id){
+            name
+        }
+    }
+
+variables: "600fffc5bc8bab18488419f5"
+
+
+###
+POST http://localhost:3000/graphql HTTP/1.1
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+mutation($avatarUrl: String!) {
+  updateAvatar(avatarUrl: $avatarUrl)
+}
+
+{
+    "avatarUrl": "aaa"
+}
+

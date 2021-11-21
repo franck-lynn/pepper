@@ -1,0 +1,23 @@
+type User {
+    _id: ID!
+    name: String! 
+    # email: String! @isRole
+    email: String!
+    password: String!
+    avatar: String
+}
+
+type Token {
+    token: String
+}
+
+type Query {
+    queryUsers: [User]
+    # queryLoginedUser(id: String!): User
+    queryLoginedUser: User
+}
+
+type Mutation {
+    login(email: String!, password: String!): Token
+    updateAvatar(avatarUrl: String!): String
+}

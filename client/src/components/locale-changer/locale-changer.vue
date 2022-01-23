@@ -118,7 +118,7 @@
 
 <style lang="scss" scoped>
     // 导入国旗图案
-    @import '~flag-icon-css/css/flag-icon.css';
+    // @import '~flag-icon-css/css/flag-icon.css';
     $icon-font-size: 25px; // 水平导航条图标的宽高字体尺寸
     $height-icon-btn: 45px; // 水平导航条高度
     $width-dropdown-menu: 180px; // 下来菜单的宽度

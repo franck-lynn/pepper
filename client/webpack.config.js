@@ -160,8 +160,8 @@ const config = {
         // host: '0.0.0.0', // https://webpack.docschina.org/configuration/dev-server/#devserverhost
         // host: 'localhost', // https://webpack.docschina.org/configuration/dev-server/#devserverhost
         // port: 8080,
-        disableHostCheck: true,
-        contentBase: "dist",
+        // disableHostCheck: true,
+        // contentBase: "dist",
         hot: true,
         // https://www.jianshu.com/p/95ce563aa7af 请求转发的文章
         proxy: {
@@ -171,7 +171,7 @@ const config = {
             '/': {
                 // 2). 代理 api的地址, 就是需要跨域的api地址, 也就是目的地
                 // target: 'https://developer.github.com/v4/explorer/',
-                target: "http://localhost:3000/",
+                // target: "http://localhost:3000/",
                 // target: "https://pet-library.moonhighway.com/",
                 secure: false, // 如果是https接口，需要配置这个参数
                 // 这个设置一下就可以跨域了, 针对客户端的任何请求, 都进行转发
